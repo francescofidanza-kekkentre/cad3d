@@ -1,5 +1,5 @@
 // CAD3D: copia locale dell'app per l'uso offline
-const VERSION = "2.13.4";
+const VERSION = "2.13.5";
 const CACHE = 'cad3d-' + VERSION;
 const FILES = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES.map((f) => new Request(f, { cache: 'reload' }))))); });
